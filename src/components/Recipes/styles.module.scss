@@ -1,0 +1,39 @@
+.recipesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 55px;
+
+  .recipesTitle {
+    max-width: 482px;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    span {
+      display: block;
+      font-size: 1rem;
+      color: var(--gray-text);
+      margin-bottom: 0.625rem;
+    }
+  }
+
+  .gridContainer {
+    max-width: 1080px;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(37rem, 1fr));
+    grid-gap: 1.25rem;
+    grid-auto-flow: dense;
+    
+    margin-top: 1.375rem;
+    padding: 1rem 0 4rem;
+  }
+}

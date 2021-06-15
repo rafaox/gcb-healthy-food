@@ -1,0 +1,89 @@
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5rem 0;
+  background: url('/co-working.svg') no-repeat right;
+  background-size: contain;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+
+    input {
+      width: 50%;
+      color: var(--text);
+      border: 1.5px solid #2D3561;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="number"] {
+      width: 47.5%;
+      -moz-appearance: textfield;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      display: none;      
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    button {
+      width: 50%;
+      font-size: 1rem;
+      height: 3.25rem;
+      border: 0;
+      border-radius: 0.5rem;
+
+      color: var(--white);
+      background-color: var(--green-700);
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    div {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      input {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px)
+{
+  .signInContainer {
+    form {
+      width: 90%;
+
+      input, button, div {
+        width: 100%;
+      }
+
+      input[type="number"] {
+        width: 50%;
+      }
+
+      input[type="number"] + input, input[type="number"] + button {
+        width: 47.5%;
+      }
+    }
+  }
+}
